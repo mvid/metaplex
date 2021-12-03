@@ -8,6 +8,7 @@ members = [
   "auction-house/",
   "token-vault/program",
   "token-metadata/program",
+  "collection/program",
   "metaplex/test",
   "token-vault/test",
   "token-metadata/test",
