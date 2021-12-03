@@ -66,6 +66,20 @@ pub enum Key {
     MasterEditionV2,
     EditionMarker,
 }
+
+#[repr(C)]
+#[derive(BorshSerialize, BorshDeserialize, PartialEq, Debug, Clone)]
+pub struct CollectionSignature {
+    pub collection: Pubkey,
+    pub signature: [u8; 32],
+}
+
+#[repr(C)]
+#[derive(BorshSerialize, BorshDeserialize, PartialEq, Debug, Clone)]
+pub struct CollectionsMetadata {
+    pub member_of: Vec<CollectionSignature>,
+}
+
 #[repr(C)]
 #[derive(BorshSerialize, BorshDeserialize, PartialEq, Debug, Clone)]
 pub struct Data {
@@ -79,6 +93,8 @@ pub struct Data {
     pub seller_fee_basis_points: u16,
     /// Array of creators, optional
     pub creators: Option<Vec<Creator>>,
+    /// Struct for collections association metadata
+    pub collections: CollectionsMetadata,
 }
 
 #[repr(C)]

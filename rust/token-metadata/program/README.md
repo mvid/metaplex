@@ -117,7 +117,7 @@ calling this endpoint. This endpoint both creates the `Edition` and `Metadata` r
 
 This program is designed to be extended with further account buckets.
 
-If say, we wanted to add metadata for youtube metadata, we could create a new struct called Youtube
+If, say, we wanted to add metadata for youtube metadata, we could create a new struct called Youtube
 and seed it with the seed
 
 ```rust
@@ -125,4 +125,4 @@ and seed it with the seed
 ```
 
 And then only those interested in that metadata need search for it, and its uniqueness is ensured. It can also
-have it's own update action that follows a similar pattern to the original update action.
+have its own update action that follows a similar pattern to the original update action.

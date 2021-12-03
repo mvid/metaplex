@@ -1,3 +1,5 @@
+pub mod add_member_of;
+
 use crate::{
     deprecated_processor::{
         process_deprecated_create_master_edition, process_deprecated_create_reservation_list,
